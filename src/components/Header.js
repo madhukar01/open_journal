@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar, Nav, Button } from 'react-bootstrap'
 
 function Header(props) {
-    if (props.isAuth !== null) {
+    if (props.isAuth !== false) {
         return (
             <div>
                 <Navbar bg="white" expand="lg">
