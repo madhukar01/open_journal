@@ -13,7 +13,7 @@
 .landing-div p{
     font-size: 25px;
 }
-.signin-form{
+.signin-form,.createpost-form{
     padding: 10vh 20vw;
 }
 .dashboard-div{
