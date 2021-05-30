@@ -23,10 +23,6 @@ class Header extends React.Component {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="justify-content-end" style={{ width: "100%" }}>
-                                <Nav.Link href="/dashboard">
-                                    <Button style={
-                                        { backgroundColor: "#6246ea", color: "white" }}>Dashboard</Button>
-                                </Nav.Link>
                                 <Nav.Link href="/">
                                     <Button style={
                                         { backgroundColor: "#6246ea", color: "white" }}>Logout</Button>
