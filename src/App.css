@@ -23,6 +23,12 @@
     gap: 15vw;
     padding-top: 5vh;
 }
+.truncate {
+    width: 42vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
 @media (min-width:320px) and (max-width: 960px) {
     .landing-div{
