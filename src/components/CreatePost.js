@@ -1,14 +1,16 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import { Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
+import { Button, Form, Radio } from 'react-bootstrap';
 
 function CreatePost() {
     return (
         <div>
             <Form className="createpost-form">
-                <Form.Group className="mb-3" controlId="posttitle">
-                    <Form.Label>Post Title</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Title" />
+                <Form.Group className="mb-3" controlId="postcategory">
+                    <Form.Label><h3>Pick a Category</h3></Form.Label>
+                    <Form.Check type="checkbox" label="News" />
+                    <Form.Check type="checkbox" label="Articles" />
+                    <Form.Check type="checkbox" label="Journals" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="postdesc">
                     <Form.Label>Post Body</Form.Label>
