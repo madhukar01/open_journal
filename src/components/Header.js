@@ -1,5 +1,4 @@
 import React from 'react'
-import Authenticate from './Authentication';
 import { Navbar, Nav, Button, Fade } from 'react-bootstrap'
 
 class Header extends React.Component {
@@ -9,15 +8,8 @@ class Header extends React.Component {
     }
 
     componentDidMount() {
-        // Authenticate
-        Authenticate().then(authData => {
-            this.authData = authData
-            this.loggedIn = authData.loggedIn
-
-            // Re - render page after authentication
-            console.log("Header: Authenticated, Force - Updating")
-            this.forceUpdate()
-        });
+        this.loggedIn = localStorage.getItem("loggedIn");
+        this.forceUpdate()
     }
 
     render() {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Lottie from "react-lottie";
 import animationData from "../assets/lottie/bg.json"
 
@@ -25,11 +25,11 @@ function LandingPage() {
             </div>
             <div className="landing-title">
                 <h1>Open Journal</h1>
-                <p>Your freedom of speech is our priority!</p>
-                <Link to = "/signin">
-                <Button style={{ backgroundColor: "#6246ea", color: "white" }}>
-                    Explore
-                </Button>
+                <p>The Voice of The World</p>
+                <Link to="/signin">
+                    <Button style={{ backgroundColor: "#6246ea", color: "white" }}>
+                        Explore
+                    </Button>
                 </Link>
             </div>
         </div>

@@ -17,8 +17,23 @@ async function Authenticate() {
     // Request users wallet address - Ethereum wallet
     const addresses = await window.ethereum.enable()
     console.log("Authentication: ", addresses[0])
+    const authData = {
+        "loggedIn": false,
+        "ceramic": ceramic,
+        "address": addresses
+    }
 
-    // // Authenticate 3ID with the wallet
+    if (addresses.length < 1) {
+        return authData
+    }
+
+    var loggedIn = localStorage.getItem("loggedIn");
+    if (loggedIn === true) {
+        authData.loggedIn = true
+        authData.address = addresses[0]
+        return authData
+    }
+    // Authenticate 3ID with the wallet
     const threeIdConnect = new ThreeIdConnect()
     const authProvider = new EthereumAuthProvider(window.ethereum, addresses[0])
     await threeIdConnect.connect(authProvider)
@@ -29,14 +44,13 @@ async function Authenticate() {
     // Set the 3ID provider to ceramic
     ceramic.did.setProvider(provider)
 
-    // Authenticate ceramic with DID
-    await ceramic.did.authenticate()
-
-    const authData = {
-        "loggedIn": true,
-        "ceramic": ceramic,
-        "address": ''
-    }
+    // Only for sign in
+    // Authenticate ceramic with 3ID
+    var res = await ceramic.did.authenticate()
+    console.log(res)
+    localStorage.setItem("loggedIn", true);
+    authData.loggedIn = true
+    authData.address = addresses[0]
     return authData
 };
 export default Authenticate
