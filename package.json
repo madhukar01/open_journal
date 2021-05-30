@@ -4,10 +4,13 @@
   "private": true,
   "dependencies": {
     "@3id/connect": "^0.1.4",
+    "@ceramicnetwork/3id-did-resolver": "^1.2.3",
     "@ceramicnetwork/http-client": "^1.0.3",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "dids": "^2.1.0",
+    "key-did-resolver": "^1.2.1",
     "n": "^7.2.2",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.0",
