@@ -15,7 +15,7 @@ function CreatePost() {
                     <Form.Control as="textarea" type="text" placeholder="Enter Description" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="postcategory">
-                    <Form.Label><h3>Pick a Category</h3></Form.Label>
+                    <Form.Label>Pick a Category</Form.Label>
                     <Form.Check type="checkbox" label="News" />
                     <Form.Check type="checkbox" label="Article" />
                     <Form.Check type="checkbox" label="Journal" />
