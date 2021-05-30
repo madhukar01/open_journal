@@ -8,13 +8,12 @@ import Loader from "react-loader-spinner";
 class Dashboard extends React.Component {
     constructor() {
         super();
-        this.loggedIn = false;
+        this.loggedIn = localStorage.getItem("loggedIn");
     }
 
     componentDidMount() {
         this.loggedIn = localStorage.getItem("loggedIn");
-
-        if (this.loggedIn !== true) {
+        if (this.loggedIn != "TRUE") {
             // Authenticate
             Authenticate().then(authData => {
                 this.authData = authData
@@ -28,7 +27,7 @@ class Dashboard extends React.Component {
     }
 
     render() {
-        if (this.loggedIn === true) {
+        if (this.loggedIn == "TRUE") {
             return (
                 <div className="dashboard-div">
                     <div>

@@ -4,7 +4,8 @@ import { Navbar, Nav, Button, Fade } from 'react-bootstrap'
 class Header extends React.Component {
     constructor() {
         super();
-        this.loggedIn = false;
+        this.loggedIn = localStorage.getItem("loggedIn");
+        localStorage.getItem("loggedIn");
     }
 
     componentDidMount() {
@@ -13,7 +14,8 @@ class Header extends React.Component {
     }
 
     render() {
-        if (this.loggedIn == true) {
+        console.log(this.loggedIn)
+        if (this.loggedIn == "TRUE") {
             return (
                 <div>
                     <Navbar bg="white" expand="lg">
@@ -21,6 +23,10 @@ class Header extends React.Component {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="justify-content-end" style={{ width: "100%" }}>
+                                <Nav.Link href="/dashboard">
+                                    <Button style={
+                                        { backgroundColor: "#6246ea", color: "white" }}>Dashboard</Button>
+                                </Nav.Link>
                                 <Nav.Link href="/">
                                     <Button style={
                                         { backgroundColor: "#6246ea", color: "white" }}>Logout</Button>

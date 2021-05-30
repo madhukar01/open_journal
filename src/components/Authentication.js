@@ -18,7 +18,7 @@ async function Authenticate() {
     const addresses = await window.ethereum.enable()
     console.log("Authentication: ", addresses[0])
     const authData = {
-        "loggedIn": false,
+        "loggedIn": "FALSE",
         "ceramic": ceramic,
         "address": addresses
     }
@@ -28,8 +28,8 @@ async function Authenticate() {
     }
 
     var loggedIn = localStorage.getItem("loggedIn");
-    if (loggedIn === true) {
-        authData.loggedIn = true
+    if (loggedIn == "TRUE") {
+        authData.loggedIn = "TRUE"
         authData.address = addresses[0]
         return authData
     }
@@ -48,8 +48,8 @@ async function Authenticate() {
     // Authenticate ceramic with 3ID
     var res = await ceramic.did.authenticate()
     console.log(res)
-    localStorage.setItem("loggedIn", true);
-    authData.loggedIn = true
+    localStorage.setItem("loggedIn", "TRUE");
+    authData.loggedIn = "TRUE"
     authData.address = addresses[0]
     return authData
 };
