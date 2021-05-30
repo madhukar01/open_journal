@@ -25,7 +25,7 @@ function LandingPage() {
             </div>
             <div className="landing-title">
                 <h1>Open Journal</h1>
-                <p>Write - Share - Earn</p>
+                <p>Your freedom of speech is our priority!</p>
                 <Link to = "/signin">
                 <Button style={{ backgroundColor: "#6246ea", color: "white" }}>
                     Explore
