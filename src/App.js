@@ -7,6 +7,7 @@ import LandingPage from './components/LandingPage';
 import SignIn from './components/SignIn';
 import Dashboard from './components/Dashboard';
 import CreatePost from './components/CreatePost';
+import ViewPost from './components/ViewPost';
 
 class App extends React.Component {
     render() {
@@ -19,6 +20,7 @@ class App extends React.Component {
                         <Route exact path="/signin" component={SignIn} />
                         <Route exact path="/dashboard" component={Dashboard} />
                         <Route exact path="/createpost" component={CreatePost} />
+                        <Route exact path="/viewpost" component={ViewPost} />
                     </Switch>
                 </div>
             </BrowserRouter>
