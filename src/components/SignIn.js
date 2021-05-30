@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import { Button, Form } from 'react-bootstrap';
 
 function SignIn() {
@@ -9,11 +10,12 @@ function SignIn() {
                     <Form.Label>Seed Phase</Form.Label>
                     <Form.Control type="email" placeholder="Enter seed" />
                 </Form.Group>
-
-                <Button variant="success" type="submit">
-                    Authenticate
+                <Link to="/dashboard">
+                    <Button variant="success" type="submit">
+                        Authenticate
                  </Button>
-                <Button variant="success" type="submit" style={{marginLeft:"5vw"}}>
+                </Link>
+                <Button variant="success" type="submit" style={{ marginLeft: "5vw" }}>
                     Generate Random Seed
                 </Button>
             </Form>
